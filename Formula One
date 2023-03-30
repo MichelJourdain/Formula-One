@@ -1,0 +1,122 @@
+  - type: horizontal-stack
+    items_classes: col-xs-12
+    cards:
+  
+      - type: vertical-stack
+        item_classes: col-xs-12 col-sm-6
+        cards:
+      
+          - type: markdown
+            content: "![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/1280px-F1.svg.png)"
+
+          - type: custom:formulaone-card
+            card_type: countdown
+            show_raceinfo: true
+            f1_font: true
+            translations:
+              days: j
+              hours': h
+              minutes': m
+              seconds': s
+              date: Date
+              practice1: Essais libres 1
+              practice2: Essais libres 2
+              practice3: Essais libres 3
+              race: Course
+              racename: Nom
+              circuitname: Piste
+              location: Endroit
+              city: Ville
+              racetime: Course
+              sprint: Sprint
+              qualifying: Qualifications
+              endofseason: Saison
+
+      - type: vertical-stack
+        item_classes: col-xs-12 col-sm-6
+        cards:
+      
+          - type: custom:tabbed-card
+            styles: # global styles applied to all tabs
+              --mdc-theme-primary: yellow
+              --mdc-tab-text-label-color-default: lightblue
+            options: {}
+            tabs:
+
+              - card:
+                  type: custom:formulaone-card
+                  card_type: results
+                  title: Résultats
+                  f1_font: true
+                  icons:
+                    results: mdi:trophy
+                    qualifying: mdi:timer-outline
+                    sprint: mdi:flag-checkered
+                  standings:
+                    show_flag: true
+                    show_team: true
+                    show_teamlogo: true
+                  translations:
+                    raceheader: Course
+                    seasonheader: Saison
+                    selectseason: Choisir une saison
+                    selectrace: Choisir une course
+                    noresults: Pas de résultats
+                    driver: Pilote
+                    team: Équipe
+                    grid: Grille
+                    status: Statut
+                    point: Points
+                    nosprint: Pas de résultats
+                attributes:
+                  icon: mdi:flag-checkered
+
+              - card:
+                  type: custom:formulaone-card
+                  title: Classement des pilotes
+                  card_type: driver_standings
+                  f1_font: true
+                  standings:
+                    show_flag: true
+                    show_team: true
+                    show_teamlogo: true
+                  translations:
+                    points: Points
+                    wins: Gagnées
+                    team: Équipe
+                    driver: Pilote
+                attributes:
+                  icon: mdi:account
+
+              - card:
+                  type: custom:formulaone-card
+                  card_type: constructor_standings
+                  title: Calssement des équipes
+                  f1_font: true
+                  standings:
+                    show_teamlogo: true
+                  translations:
+                    constructor: Équipe
+                    points: Points
+                    wins: Gagné
+                attributes:
+                  icon: mdi:microsoft-teams
+                
+              - card:
+                  type: custom:formulaone-card
+                  card_type: schedule
+                  date_locale: ca
+                  title: Horaire
+                  f1_font: true
+                  translations:
+                    date: Date
+                    race: Course
+                    location: Endroit
+                    endofseason: Fin de la saison
+                    time: Heure
+                attributes:
+                  icon: mdi:calendar-month
+                standings:
+                    show_flag: true
+                    show_team: true
+                    show_teamlogo: true
